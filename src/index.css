@@ -1,3 +1,85 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ===========================
+   Accent color CSS variables
+   (JS overrides these on theme change)
+   =========================== */
+:root {
+  --accent:             #f59e0b;
+  --accent-04:          rgba(245,158,11,0.04);
+  --accent-06:          rgba(245,158,11,0.06);
+  --accent-08:          rgba(245,158,11,0.08);
+  --accent-10:          rgba(245,158,11,0.10);
+  --accent-15:          rgba(245,158,11,0.15);
+  --accent-20:          rgba(245,158,11,0.20);
+  --accent-25:          rgba(245,158,11,0.25);
+  --accent-30:          rgba(245,158,11,0.30);
+  --accent-35:          rgba(245,158,11,0.35);
+  --accent-40:          rgba(245,158,11,0.40);
+  --accent-50:          rgba(245,158,11,0.50);
+  --accent-60:          rgba(245,158,11,0.60);
+  --accent-70:          rgba(245,158,11,0.70);
+  --accent-glow:        rgba(245,158,11,0.25);
+  --accent-glow-strong: rgba(245,158,11,0.45);
+}
+
+/* ===========================
+   Base — Outfit font
+   =========================== */
+*, *::before, *::after {
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+body {
+  background-color: #090909;
+  color: #f0f0f0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===========================
+   Dot-grid texture
+   =========================== */
+.dot-grid {
+  background-image: radial-gradient(
+    circle,
+    var(--accent-04) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+}
+
+/* ===========================
+   Sidebar — hide scrollbar
+   =========================== */
+.sidebar-nav::-webkit-scrollbar { display: none; }
+.sidebar-nav { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ===========================
+   Cursor blink
+   =========================== */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.cursor-blink {
+  animation: cursor-blink 0.85s step-end infinite;
+}
+
+/* ===========================
+   Text selection
+   =========================== */
+::selection {
+  background: var(--accent-25);
+  color: #fff;
+}
+
+/* ===========================
+   Scrollbar (main area)
+   =========================== */
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: #090909; }
+::-webkit-scrollbar-thumb { background: var(--accent-20); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-40); }
