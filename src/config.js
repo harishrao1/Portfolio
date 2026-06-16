@@ -58,7 +58,8 @@ export const EXPERIENCES = [
 export const PROJECTS = [
   {
     name: "AI Mock Interviewer",
-    year: "2025",
+    liveUrl: "https://ai-mock-interviewer-coral.vercel.app",
+    year: "2026",
     description:
       "AI-powered mock interview web app — paste a job description and receive tailored interview questions generated via the Claude API with real-time streamed responses.",
     highlights: [
