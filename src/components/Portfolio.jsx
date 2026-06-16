@@ -446,7 +446,7 @@ const Portfolio = () => {
                 Core Stack
               </p>
               <div className="space-y-2.5">
-                {["React.js", "JavaScript" "TypeScript", "Redux", "Ag-Grid", "Nivo Charts", "Webpack"].map((tech, i) => (
+                {["React.js", "JavaScript", "TypeScript", "Redux", "Ag-Grid", "Nivo Charts", "Webpack"].map((tech, i) => (
                   <div key={i} className="flex items-center gap-2.5">
                     <span className="w-1 h-1 rounded-full bg-[var(--accent-40)] shrink-0" />
                     <span className="text-[12px] text-gray-400 font-medium">{tech}</span>
