@@ -446,7 +446,7 @@ const Portfolio = () => {
                 Core Stack
               </p>
               <div className="space-y-2.5">
-                {["React.js", "TypeScript", "Redux", "Ag-Grid", "Nivo Charts", "Webpack"].map((tech, i) => (
+                {["React.js", "JavaScript" "TypeScript", "Redux", "Ag-Grid", "Nivo Charts", "Webpack"].map((tech, i) => (
                   <div key={i} className="flex items-center gap-2.5">
                     <span className="w-1 h-1 rounded-full bg-[var(--accent-40)] shrink-0" />
                     <span className="text-[12px] text-gray-400 font-medium">{tech}</span>
@@ -631,6 +631,19 @@ const Portfolio = () => {
                     </div>
                   </div>
 
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1 text-[12px] font-medium
+                        text-[var(--accent)] hover:brightness-110 mb-3 cursor-pointer"
+                    >
+                      Live Preview
+                      <ArrowUpRight size={12} />
+                    </a>
+                  )}
+                  
                   <p className="text-[13px] text-gray-400 leading-relaxed mb-4">
                     {project.description}
                   </p>
